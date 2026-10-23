@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunringer — Arduino Learning Project | Mansi Sisodia</title>
+  <meta name="description" content="Case study: Sunringer — an Arduino-based sunlight alert device using an LDR sensor and buzzer. A hands-on learning project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Mansi<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#leadership">Leadership</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="cv/Mansi Sisodia_CV Final.pdf" target="_blank" class="btn btn-sm">View CV</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CASE HERO -->
+  <section class="case-hero">
+    <div class="case-hero-inner">
+      <a href="index.html#projects" class="case-back reveal">← Back to projects</a>
+
+      <div class="case-hero-meta reveal">
+        <span class="tag tag-yellow">Hardware</span>
+        <span class="tag tag-lavender">Learning Project</span>
+        <span class="tag tag-blue">Arduino</span>
+      </div>
+
+      <h1 class="case-hero-title reveal">Sunringer</h1>
+      <p class="case-hero-subtitle reveal">
+        A sunlight-based alert device built with Arduino, an LDR sensor and a buzzer — 
+        a hands-on learning project that taught me what it means to prototype something 
+        physical from scratch without a guide for every step.
+      </p>
+
+      <div class="case-hero-image reveal" style="background: linear-gradient(135deg, #FBF5D9 0%, #E8F4E8 100%); display:flex; align-items:center; justify-content:center; height:320px; border-radius:24px;">
+        <div style="text-align:center; color:var(--text-muted);">
+          <div style="font-size:5rem; margin-bottom:16px;">☀️</div>
+          <p style="font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--text-secondary);">Sunringer</p>
+          <p style="font-size:0.9rem; margin-top:8px;">📷 No photograph available — project documentation was not provided</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE BODY -->
+  <div class="case-body">
+    <main class="case-main">
+
+      <h2>Overview</h2>
+      <p>
+        Sunringer is a small Arduino-based device designed to detect sunlight levels and alert the user when a threshold is crossed — using an LDR (light-dependent resistor) to sense light intensity and a buzzer to signal the alert.
+      </p>
+      <p>
+        This was a learning project. The goal was never to launch a commercial product — it was to understand how physical prototyping works: what it takes to take an idea, wire up components, write basic code and make a real thing that actually responds to the real world.
+      </p>
+
+      <h2>The Idea</h2>
+      <p>
+        The concept behind Sunringer is simple: sunlight exposure matters. Whether for plant care, UV awareness, laundry timing or just personal reminders — there are everyday situations where knowing that light levels have changed is genuinely useful.
+      </p>
+      <p>
+        An LDR-based alert is an elegant solution to this: cheap, low-power, and physically straightforward. The challenge is in making it work reliably and understanding why it doesn't when it doesn't.
+      </p>
+
+      <h2>How It Works</h2>
+      <p>
+        The prototype is built around three key components:
+      </p>
+      <ul>
+        <li><strong>Arduino board</strong> — the brain. Reads sensor input and controls output.</li>
+        <li><strong>LDR (Light-Dependent Resistor)</strong> — a sensor whose resistance changes based on light. Bright light = lower resistance = higher voltage reading on the Arduino's analog pin.</li>
+        <li><strong>Buzzer</strong> — when the light reading crosses a defined threshold, the Arduino triggers the buzzer to emit an alert tone.</li>
+      </ul>
+      <p>
+        The logic is: read light level → compare to threshold → if above threshold, sound buzzer; if below, stay silent. Adjusting the threshold changes when the alert fires, which lets you calibrate for different conditions.
+      </p>
+
+      <div class="callout">
+        <p>
+          The most instructive moment of this project wasn't getting it to work — 
+          it was debugging why it didn't. Understanding the circuit and the code together, 
+          rather than treating them as separate problems, was the real learning.
+        </p>
+      </div>
+
+      <h2>My Involvement</h2>
+      <ul>
+        <li>Assembled the circuit on a breadboard</li>
+        <li>Wrote and modified the Arduino sketch (code)</li>
+        <li>Calibrated the light threshold for different conditions</li>
+        <li>Tested and debugged the prototype</li>
+        <li>Documented how the components interact</li>
+      </ul>
+
+      <h2>What I Learned</h2>
+      <p>
+        This project taught me several things that you can't fully learn from reading about them:
+      </p>
+      <ul>
+        <li><strong>Physical constraints are real.</strong> A wiring error behaves differently from a code error. You have to understand both.</li>
+        <li><strong>Iteration is the method.</strong> The first version didn't work perfectly. Adjusting and testing again is the process, not a detour from it.</li>
+        <li><strong>Simple ideas can be technically interesting.</strong> "Make a noise when it's sunny" sounds trivial. Making it reliable and configurable isn't.</li>
+        <li><strong>Hardware projects change how you think about software.</strong> Understanding the physical layer makes you more careful and more curious about what's happening underneath any system.</li>
+      </ul>
+
+      <h2>Status</h2>
+      <p>
+        Sunringer is a completed prototype and learning project. It was not launched commercially — and that was never the goal. It was an exercise in building something physical, end to end, and understanding the process of turning an idea into a working object.
+      </p>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="case-sidebar">
+
+      <div class="case-sidebar-card reveal">
+        <h4>Project Type</h4>
+        <p>Hardware Prototype — Learning Project</p>
+      </div>
+
+      <div class="case-sidebar-card reveal reveal-delay-1">
+        <h4>Components</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;">
+          <span class="tag tag-yellow">Arduino</span>
+          <span class="tag tag-blue">LDR Sensor</span>
+          <span class="tag tag-lavender">Buzzer</span>
+          <span class="tag tag-green">Breadboard</span>
+        </div>
+      </div>
+
+      <div class="case-sidebar-card reveal reveal-delay-2">
+        <h4>Status</h4>
+        <p>Completed prototype. Not a commercial product.</p>
+      </div>
+
+      <div class="case-sidebar-card reveal">
+        <h4>Key Skills</h4>
+        <p>Circuit assembly, Arduino programming, debugging, iterative prototyping</p>
+      </div>
+
+      <div class="case-sidebar-card reveal reveal-delay-1" style="background: var(--yellow-light); border-color: var(--yellow);">
+        <h4 style="color: #7a6020;">📷 Asset Note</h4>
+        <p style="color: #7a6020; font-size:0.85rem;">No Sunringer photographs were found in the project folder. If you have photos, add them to the <code>photos/</code> folder and update this page.</p>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="nav-logo">Mansi<span>.</span></a>
+        <p class="footer-copy">© 2026 Mansi Sisodia · Made with curiosity</p>
+        <nav class="footer-nav">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
